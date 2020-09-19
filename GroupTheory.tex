@@ -88,8 +88,66 @@
 
 \end{Prob}
 
-\textbf{Proof:}
+\textbf{Proof:} In order to show that $G$ is not a group, we need to show that $G$ (together with the matrix multiplication as the set operation) does not satisfy any of the following group conditions:
 
+\begin{enumerate}
+	\item \textbf{Closure Law}: If $A$ and $B$ are elements of $G$, then $AB$ is also an element of $G$. 
+	
+	\item \textbf{Associative Law}: If $A, B$ and $C$ are elements of $G$, then $(AB)C = A(BC)$.
+	
+	\item \textbf{Existence of unit}: There is an element $I$ in $G$ such that for all $A$ in $G$, we have that $IA = AI = A$.
+	
+	\item \textbf{Existence of inverse}: For every element $A$ in $G$, there is another element $B$ in $G$ such that $AB = BA = I$.
+\end{enumerate} 
+
+If $G$ does not satisfy any of the above conditions, then $G$ is not a group. Let us show that $G$ together with the matrix multiplication as the set operation for $G$ does not satisfy condition $4$.\\
+
+Effectively, let us take a matrix from the set $G$. Then, the form of such matrix is the following:
+
+\begin{center}
+	$\left[\begin{array}{cc}
+	a & 3b\\
+	b & a
+	\end{array}\right]$, \hspace{0.1cm} where $a, b \in \mathbb{R}$ and $ab \neq 0$.
+\end{center}
+
+Now, the previous matrix has a multiplicative inverse, if and only if, its determinant is different from zero. Let us compute the determinant of such matrix, this is:
+
+\begin{center}
+	$\left|\begin{array}{cc}
+	a & 3b\\
+	b & a
+	\end{array}\right| = a^{2} - 3b^{2}$
+\end{center}
+
+Therefore, once we have the definitive form of the determinant of any matrix in $G$ (as in the previous paragraph shows), we can now determine the condition that will make such determinant equal to zero. Let us consider the following:
+
+\begin{center}
+	$\left|\begin{array}{cc}
+	a & 3b\\
+	b & a
+	\end{array}\right| = a^{2} - 3b^{2} = 0 \iff  a^{2} = 3b^{2} \iff \pm a = \pm\sqrt{3}b$
+\end{center} 
+
+Thus, we have shown that if the above matrix is such that $\pm a = \pm\sqrt{3}b$, then its determinant is equal to zero. Now, the following matrix is a member of the set $G$:
+
+\begin{center}
+	$A = \left[\begin{array}{cc}
+	\sqrt{3}b & 3b\\
+	b & \sqrt{3}b
+	\end{array}\right]$
+\end{center}
+
+Nevertheless, we have that its determinant is given by:
+
+\begin{center}
+	$\left|A\right| = \left|\begin{array}{cc}
+		\sqrt{3}b & 3b\\
+		b & \sqrt{3}b
+	\end{array}\right| = \sqrt{3}b\cdot\sqrt{3}b - 3b\cdot b = (\sqrt{3})^{2}b^{2} - 3b^{2} = 3b^{2} - 3b^{2} = 0$.
+\end{center}
+
+So, the previous matrix given by $A$ is a matrix that belongs to $G$ but such matrix does not have a multiplicative inverse because $\det(A) = 0$. Therefore, we conclude that $G$ is not a group. \hspace{0.1cm} $\square$
 
 \begin{Prob}
 	Let
@@ -103,8 +161,5 @@
 	
 	Prove that $G$ is a group with respect to multiplication.
 \end{Prob}
-
-\textbf{Proof:} 
-
 
 \end{document}
