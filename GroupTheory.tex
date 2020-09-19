@@ -1,0 +1,110 @@
+\documentclass[a4paper,openany,11pt]{book}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{array,multirow}
+\usepackage{graphicx}
+
+
+\setcounter{secnumdepth}{3} %para que ponga 1.1.1.1 en subsubsecciones
+\setcounter{tocdepth}{3} % para que ponga subsubsecciones  en el indice
+
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry} %Definimos los Margenes
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhead[LO]{\leftmark} % En las pÃ¡ginas impares, parte izquierda del encabezado, aparecerÃ¡ el nombre de capÃ­tulo
+\fancyhead[RE]{\rightmark} % En las pÃ¡ginas pares, parte derecha del encabezado, aparecerÃ¡ el nombre de secciÃ³n
+\renewcommand{\chaptermark}[1]{\markboth{\textbf{\thechapter. #1}}{}} % Formato para el capÃ­tulo: N. Nombre
+\renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection. #1}}} % Formato para la secciÃ³n: N.M. Nombre
+
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{mathpazo}
+\usepackage{tikz}
+\usepackage{latexsym,amsmath,amssymb,amsfonts,cancel}
+
+
+\newcommand{\titulo}[1]{\vspace{4cm}{\Huge\textsc{\begin{center}#1 \end{center}\vspace{-28pt}}}}
+\newcommand{\subtitulo}[1]{{\Large\textsc{\begin{center}#1\\[5cm]\end{center}}}}
+\newcommand{\tutor}[1]{{\Large\textsc{\begin{center}Tutor: #1\\\end{center}}}}
+\newcommand{\lugarfecha}{{\Large\textsc{\begin{center}Valencia-Venezuela\\ \today\end{center}}}\vfill}
+\newcommand{\logos}{\begin{tikzpicture}[remember picture,overlay]
+
+% draw image
+\node[inner sep=0, xshift=2.9cm, yshift=-3.7cm] at (current page.north west)
+{\includegraphics[width=1.5cm]{uc.jpg}};
+\node[inner sep=0, xshift=-2.9cm, yshift=-3.7cm] at (current page.north east)
+{\includegraphics[width=1.5cm]{facyt.jpg}};
+\draw (0,-3.3cm) -- (17cm,-3.3cm) ;
+\node[align=center, scale=1.4] at (0.5\textwidth,-1.6cm)
+{República Bolivariana de Venezuela\\ Universidad de Carabobo\\ Facultad Experimental de Ciencias y Tecnología\\ Departamento de Matemáticas};
+	
+%\draw[gray!70!blue] (0,-4.0cm) -- (17cm,-4.0cm) ;
+\end{tikzpicture}}
+
+
+
+\setlength{\parindent}{0cm} 
+
+\newtheorem{Teo}{Theorem}
+\newtheorem{Def}{Definition}
+\newtheorem{Lemma}{Lemma}
+\newtheorem{Prob}{Problem}
+\newtheorem{Corol}{Corollary}
+
+
+\begin{document}
+	
+	\begin{center}
+		\text{\bf \Large \underline{Group Theory}}
+	\end{center}
+
+\begin{Prob}
+	Find all cyclic generators for $(U_{37}, \otimes, 1)$.
+\end{Prob}
+
+\textbf{Proof:} 
+
+\begin{Prob}
+	Find all subgroups of size $9$ in $(U_{37,\oplus,1})$.
+\end{Prob}
+
+\textbf{Proof:} 
+
+\begin{Prob}
+	Let
+	
+	\begin{center}
+		$G = \biggl\{\left[\begin{array}{cc}
+		a & 3b\\
+		b & a
+		\end{array}\right] : a$ and $b$ are real numbers and $ab \neq 0\biggr\} $
+	\end{center}
+
+	Prove that $G$ is not a group with respect to multiplication.
+
+\end{Prob}
+
+\textbf{Proof:}
+
+
+\begin{Prob}
+	Let
+	
+	\begin{center}
+		$G = \biggl\{\left[\begin{array}{cc}
+		a & 3b\\
+		b & a
+		\end{array}\right] : a$ and $b$ are rational numbers and $ab \neq 0\biggr\} $
+	\end{center}
+	
+	Prove that $G$ is a group with respect to multiplication.
+\end{Prob}
+
+\textbf{Proof:} 
+
+
+\end{document}
