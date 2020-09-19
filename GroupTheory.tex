@@ -162,4 +162,100 @@ So, the previous matrix given by $A$ is a matrix that belongs to $G$ but such ma
 	Prove that $G$ is a group with respect to multiplication.
 \end{Prob}
 
+\textbf{Proof:} In order to show that $G$ represents a group, we need to show that $G$ (together with the matrix multiplication as the set operation) satisfies the following group conditions:
+
+\begin{enumerate}
+	\item \textbf{Closure Law}: If $A$ and $B$ are elements of $G$, then $AB$ is also an element of $G$. 
+	
+	\item \textbf{Associative Law}: If $A, B$ and $C$ are elements of $G$, then $(AB)C = A(BC)$.
+	
+	\item \textbf{Existence of unit}: There is an element $I$ in $G$ such that for all $A$ in $G$, we have that $IA = AI = A$.
+	
+	\item \textbf{Existence of inverse}: For every element $A$ in $G$, there is another element $B$ in $G$ such that $AB = BA = I$.
+\end{enumerate}
+
+Let us show that each of the previous conditions are satisfied by $G$.\\
+
+\underline{Closure Law:} Let us take two matrices $A$ and $B$ in $G$ such that:
+
+\begin{center}
+	$A = \left(\begin{array}{cc}
+	a & 3b\\
+	b & a
+	\end{array}\right)$ \hspace{0.1cm} $\wedge$ \hspace{0.1cm} $B = \left(\begin{array}{cc}
+		c & 3d\\
+		d & c
+	\end{array}\right)$
+\end{center}
+
+Let us compute the multiplication of $A$ and $B$ in the following way:
+
+\begin{center}
+	$AB = \left(\begin{array}{cc}
+	a & 3b\\
+	b & a
+	\end{array}\right) \left(\begin{array}{cc}
+	c & 3d\\
+	d & c
+	\end{array}\right) = \left(\begin{array}{cc}
+	ac + 3bd & 3ad+3bc \\
+	bc+ad & 3bd+ac
+	\end{array}\right) = \left(\begin{array}{cc}
+	ac + 3bd & 3(ad+bc) \\
+	ad+bc & ac+3bd
+	\end{array}\right)$
+\end{center}
+
+Therefore, if we take the following substitution:
+
+\begin{center}
+	$e = ac + 3bd$ \hspace{0.1cm} and \hspace{0.1cm} $f = ad+bc$
+\end{center}
+
+Then, we have that the matrix $AB$ is equal to the following expression:
+
+\begin{center}
+	$AB = \left(\begin{array}{cc}
+	ac + 3bd & 3(ad+bc) \\
+	ad+bc & ac+3bd
+	\end{array}\right) = \left(\begin{array}{cc}
+	e & 3f \\
+	f & e
+	\end{array}\right)$
+\end{center}
+
+Thus, the matrix $AB$ is an element of $G$ and therefore $G$ is closed under matrix multiplication.\\
+
+\underline{Associativity:} Matrix multiplication is an associative operation on the set of all square matrices $2\times2$ and therefore, as $G$ is a subset of such set, then we can conclude that the associative law is satisfied in $G$ because it is inherited from the set of all square matrices $2\times2$ under multiplication.\\
+
+\underline{Existence of inverse:} Now, following the same procedure as in the previous problem, we have that if $A$ is a matrix of $G$ such that:
+
+\begin{center}
+	$A = \left(\begin{array}{cc}
+	a & 3b\\
+	b & a
+	\end{array}\right)$
+\end{center}
+
+Then, in order for $A$ to have an inverse, we need to assure that $\det(A) \neq 0$. Thus, we know that:
+
+\begin{center}
+	$\det(A) = \left|\begin{array}{cc}
+	a & 3b\\
+	b & a
+	\end{array}\right| = a^{2} - 3b^{2}$
+\end{center}
+
+So, the only way in which $A$ has not a multiplicative inverse is that:
+
+\begin{center}
+	$a^{2}-3b^{2} \iff a^{2} = 3b^{2} \iff \pm a = \pm \sqrt{3}b$
+\end{center}
+
+Nevertheless, the previous relation is not possible because all entries of the matrix $A$ must be rational numbers and $a = \sqrt{3}b$ is not rational, because we have that both $a$ and $b$ are rational but $\sqrt{3}$ is not, so the product of $b$ and $\sqrt{3}$ is an irrational number which makes $a$ irrational and rational (contradiction). Thus, the determinant of any matrix in $G$ must be different from zero and therefore every matrix in $G$ has an multiplicative inverse in $G$.\\
+
+\underline{Existence of unit:} The existence of such matrix can be shown from taking into account that every matrix $A$ in $G$ has a multiplicative inverse in $G$, let say $B$. Therefore, as $G$ is closed under matrix multiplication, we have that $AB$ is an element of $G$. Therefore, by definition of inverse of an element, we have that $AB = I$ and by the previous assumptions, we conclude that the unit of $G$ exists and belongs to $G$.\\
+
+For all the previous remarks, we conclude that effectively $G$ represents a group. \hspace{0.1cm} $\square$ 
+
 \end{document}
