@@ -75,7 +75,7 @@
 Now, consider the following auxiliary result which will allow us to find all cyclic generators of $U_{37}$:
 
 \begin{Lemma}
-	Suppose that $p$ is a prime number and $a \in (U_{37},\otimes, 1)$. Then $a$ is a generator of $(U_{37},\otimes, 1)$ if and only if:
+	Suppose that $p$ is a prime number and $a \in (U_{p},\otimes, 1)$. Then $a$ is a generator of $(U_{p},\otimes, 1)$ if and only if:
 	
 	\begin{center}
 		$a^{\frac{p-1}{q}} \not \equiv 1 \mod p$
@@ -104,7 +104,7 @@ Following a similar approach we have that the following list represent the entir
 \end{center}
 
 \begin{Prob}
-	Find all subgroups of size $9$ in $(U_{37,\oplus,1})$.
+	Find all subgroups of size $9$ in $(U_{37},\oplus,1)$.
 \end{Prob}
 
 \textbf{Solution:} In order to solve this problem, let us have into consideration the following auxiliary result:
@@ -132,15 +132,15 @@ The following elements $16, 34, 9, 33, 7 \in U_{37}$ can be represented in the f
 All the previous elements with their respective representation as a power of $2$ have an exponent $k$ such that $gcd(36,k) = 4$. Therefore, all the subgroups of order $9$ are the following:
 
 \begin{itemize}
-	\item $(16) = \lbrace x \in U_{37}: x = 16^{k}$, where $0 \leq k \leq 8 \rbrace$
+	\item $(16) = \lbrace x \in U_{37}: x = 16^{m_{1}}$, where $0 \leq m_{1} \leq 8 \rbrace$
 	
-	\item $(34) = \lbrace x \in U_{37}: x = 16^{k}$, where $0 \leq k \leq 8 \rbrace$
+	\item $(34) = \lbrace x \in U_{37}: x = 34^{m_{2}}$, where $0 \leq m_{2} \leq 8 \rbrace$
 	
-	\item $(9) = \lbrace x \in U_{37}: x = 16^{k}$, where $0 \leq k \leq 8 \rbrace$
+	\item $(9) = \lbrace x \in U_{37}: x = 9^{m_{3}}$, where $0 \leq m_{3} \leq 8 \rbrace$
 	
-	\item $(33) = \lbrace x \in U_{37}: x = 16^{k}$, where $0 \leq k \leq 8 \rbrace$
+	\item $(33) = \lbrace x \in U_{37}: x = 33^{m_{4}}$, where $0 \leq m_{4} \leq 8 \rbrace$
 	
-	\item $(7) = \lbrace x \in U_{37}: x = 16^{k}$, where $0 \leq k \leq 8 \rbrace$
+	\item $(7) = \lbrace x \in U_{37}: x = 7^{m_{5}}$, where $0 \leq m_{5} \leq 8 \rbrace$
 \end{itemize}
 
 Any other element in $U_{37}$ cannot be represented as $2^{k}$, where $gcd(36,k) = 4$. Therefore, the previous subgroups are all the subgroups in $(U_{37}, \otimes, 1)$ that have order $9$. \hspace{0.1cm} $\square$
@@ -179,7 +179,7 @@ Effectively, let us take a matrix from the set $G$. Then, the form of such matri
 	$\left[\begin{array}{cc}
 	a & 3b\\
 	b & a
-	\end{array}\right]$, \hspace{0.1cm} where $a, b \in \mathbb{R}$ and $ab \neq 0$.
+	\end{array}\right]$, \hspace{0.1cm} where $a, b \in \mathbb{R}$ and $a \neq 0$ or $b \neq 0$.
 \end{center}
 
 Now, the previous matrix has a multiplicative inverse, if and only if, its determinant is different from zero. Let us compute the determinant of such matrix, this is:
@@ -191,7 +191,7 @@ Now, the previous matrix has a multiplicative inverse, if and only if, its deter
 	\end{array}\right| = a^{2} - 3b^{2}$
 \end{center}
 
-Therefore, once we have the definitive form of the determinant of any matrix in $G$ (as in the previous paragraph shows), we can now determine the condition that will make such determinant equal to zero. Let us consider the following:
+Therefore, once we have the definitive form of the determinant of any matrix in $G$ (as the previous paragraph shows), we can now determine the condition that will make such determinant equal to zero. Let us consider the following:
 
 \begin{center}
 	$\left|\begin{array}{cc}
@@ -209,7 +209,7 @@ Thus, we have shown that if the above matrix is such that $\pm a = \pm\sqrt{3}b$
 	\end{array}\right]$
 \end{center}
 
-Nevertheless, we have that its determinant is given by:
+where $b \neq 0$. Nevertheless, we have that its determinant is given by:
 
 \begin{center}
 	$\left|A\right| = \left|\begin{array}{cc}
@@ -256,7 +256,7 @@ Let us show that each of the previous conditions are satisfied by $G$.\\
 	\end{array}\right)$ \hspace{0.1cm} $\wedge$ \hspace{0.1cm} $B = \left(\begin{array}{cc}
 		c & 3d\\
 		d & c
-	\end{array}\right)$
+	\end{array}\right)$, \hspace{0.1cm} where ($a \neq 0$ or $b \neq 0$) and ($c \neq 0$ or $d \neq 0$)
 \end{center}
 
 Let us compute the multiplication of $A$ and $B$ in the following way:
@@ -311,7 +311,7 @@ Thus, the matrix $AB$ is an element of $G$ and therefore $G$ is closed under mat
 \end{array}\right) \in \hspace{0.1cm} G$
 \end{center}
 
-So, we have shown that the matrix $I$ has the form of any matrix in $G$. Therefore, $I$ belongs to $G$, which means that $G$ has a unit element.\\
+So, we have shown that the matrix $I$ has the form of a matrix in $G$. Therefore, $I$ belongs to $G$, which means that $G$ has a unit element.\\
 
 \underline{Existence of inverse:} Now, following the same procedure as in the previous problem, we have that if $A$ is a matrix of $G$ such that:
 
@@ -331,7 +331,7 @@ Then, in order for $A$ to have an inverse, we need to assure that $\det(A) \neq 
 	\end{array}\right| = a^{2} - 3b^{2}$
 \end{center}
 
-So, the only way in which $A$ has not a multiplicative inverse is that:
+So, the only way in which $A$ does not have a multiplicative inverse is that:
 
 \begin{center}
 	$a^{2}-3b^{2} \iff a^{2} = 3b^{2} \iff \pm a = \pm \sqrt{3}b$
